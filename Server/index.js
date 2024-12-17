@@ -56,7 +56,7 @@ const openApiSpec = JSON.parse(
 	fs.readFileSync(path.join(__dirname, "openapi.json"), "utf8")
 );
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Need to wrap server setup in a function to handle async nature of JobQueue
 const startApp = async () => {
